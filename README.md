@@ -11,3 +11,30 @@ Build an ETL pipeline using Python.
 ## DATA SCHEMA
 This data is divided in multiple datasets.
 The aim of this project is to create tables in python and model data using postgres.
+
+## Code Errors faced and solutions
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+~\AppData\Local\Temp/ipykernel_6532/3623735665.py in <module>
+      1 for i, row in order_items.iterrows():
+      2     #print(list(row))
+----> 3     cur.execute(orderitems_table_insert, list(row))
+      4 
+      5 #conn.commit()
+
+TypeError: not all arguments converted during string formatting
+
+2. When loading the orders table data into postgres I got the error below.
+---------------------------------------------------------------------------
+DatatypeMismatch                          Traceback (most recent call last)
+~\AppData\Local\Temp/ipykernel_6532/2693653344.py in <module>
+      1 for i, row in orders.iterrows():
+      2     #print(list(row))
+----> 3     cur.execute(orders_table_insert, list(row))
+      4 
+      5 #conn.commit()
+
+DatatypeMismatch: column "order_delivered_carrier_date" is of type timestamp without time zone but expression is of type double precision
+LINE 10: ...d', '2017-04-11 12:22:08', '2017-04-13 13:25:17', 'NaN'::flo...
+                                                              ^
+HINT:  You will need to rewrite or cast the expression.
