@@ -13,6 +13,8 @@ This data is divided in multiple datasets.
 The aim of this project is to create tables in python and model data using postgres.
 
 ## Code Errors faced and solutions
+
+### 1. When loading the orders table data into postgres I got the error below
 ---------------------------------------------------------------------------
 TypeError                                 Traceback (most recent call last)
 ~\AppData\Local\Temp/ipykernel_6532/3623735665.py in <module>
@@ -24,7 +26,7 @@ TypeError                                 Traceback (most recent call last)
 
 TypeError: not all arguments converted during string formatting
 
-2. When loading the orders table data into postgres I got the error below.
+### 2. When loading the orders table data into postgres I got the error below.
 ---------------------------------------------------------------------------
 DatatypeMismatch                          Traceback (most recent call last)
 ~\AppData\Local\Temp/ipykernel_6532/2693653344.py in <module>
